@@ -75,7 +75,7 @@ body {
 .bg-dark     { background-color: #24282B;  }
 
 .text-light { color: white; } 
-.text-featured { color: #F59186;}
+.text-featured { color: #e29578;}
 
 
 .left   { text-align: left; }
@@ -100,15 +100,18 @@ h1 {font-size: 3rem;}
 h2 {font-size: 2.5rem;}
 h3 {font-size: 2rem;}
 
+
 p {
     line-height: 1.4;
     font-size: 1.1rem;
     margin-bottom: 0.8rem;
 }
 
-ul { margin-left: 1rem;}
+ul { margin-left: 1rem;
+    line-height: 1.4;}
 
-li { padding-left: 0.4rem;}
+li { padding-left: 0.4rem;
+     line-height: 1.4;}
 
 h1:last-child, 
 h2:last-child, 
@@ -125,7 +128,11 @@ p:last-child {
 .text-xl { font-size: 6rem; }
 .text-xxl { font-size: 8.5rem; }
 
+.show-sm { display: none; }
+
 .text-bold {font-weight: bold;}
+.text-featured {color: #e29578;}
+.text-lighter {color: #bc6c25;}
 
 .text-lato { 
     font-family: 'Lato', sans-serif;
@@ -139,7 +146,7 @@ a{
 
 .button {
     color: inherit;
-    border: 1px solid #F59186;
+    border: 1px solid #e29578;
     border-radius: 2rem;
     text-decoration: none;
     display: inline-block;
@@ -147,12 +154,21 @@ a{
 }
 
 
+a:hover {
+    background-color: #e29578;
+    color: white;
+}
+
+
 /* Header & Footer */
 
 footer {
-    padding-bottom: 0.5rem;
-    color: rgb(95, 90, 90);
+    padding-bottom: 2rem;
+    color: rgb(140, 140, 140);
+    font-family: 'Lato';
 }
+
+footer p {font-size: 0.8rem;}
 
 /* Images & Background Images */
 
@@ -162,7 +178,7 @@ footer {
 }
 
 .bg-map { background-image: url('/images/light-colored-map.png');}
-.bg-leaves { background-image: url('/images/zen-studio-1.jpg');
+.bg-leaves { background-image: url('/images/leaves-light.png');
              background-position: 54% 34%;}
 .bg-venue { background-image: url('/images/zen-studio-3.jpg');}
 .bg-stone { background-image: url('/images/stone.png');}
@@ -172,7 +188,34 @@ footer {
     border-bottom-right-radius: 0;      
 }
 
-.shape-window{
+.shape-window {
     border-top-left-radius: 20rem;
     border-top-right-radius: 20rem;
 }
+
+
+
+/* CSS Media Query 	Applies 	Usage
+@media (max-width: 36em) 	Max 576px 	_xs-*
+@media (max-width: 48em) 	Max 768px 	_sm-*
+@media (max-width: 64em) 	Max 1024px 	_md-*
+@media (max-width: 80em) 	Max 1280px 	_lg-* */
+
+/* for small devices */
+@media(max-width: 48em) {
+    .text-xxl { font-size: 6.5rem; }
+    .bg-leaves { background-image: url('/images/elena-joland-uKSdkD_WOxk-unsplash.jpg');}
+    .text-center-sm { text-align: center;}
+}
+
+
+/* for extra small devices */
+@media(max-width: 36em) {
+    .text-xxl {display: none; }
+    .show-sm {display: block; }
+    .text-xl {display: block; }
+}
+
+/* for xxs devices */
+@media(max-width: 25em){}
+
